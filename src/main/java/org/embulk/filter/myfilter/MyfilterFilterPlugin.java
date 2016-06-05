@@ -97,7 +97,9 @@ public class MyfilterFilterPlugin
                             if (pageReader.isNull(column)) {
                                 pageBuilder.setNull(column);
                             } else {
-                                pageBuilder.setString(column, pageReader.getString(column));
+//                                pageBuilder.setString(column, pageReader.getString(column));
+                                String str = pageReader.getString(column);
+                                pageBuilder.setString(column, str.toUpperCase());
                             }
                         }
 
